@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar Binatang</title>
+    <script>
+        
+        
+        
+        function klik(){       
+            
+            
+            let pilih_binatang = document.getElementById("binatang");
+            alert("Ini Gambar " + pilih_binatang.value);
+            let pi = pilih_binatang.selectedIndex;
+            console.log("binatang pilihan anda :" + pilih_binatang[pi].value);
+            
+
+            let ambil_gambar = document.getElementById("hutan");
+            ambil_gambar.src="binatang/"+pilih_binatang[pi].value+".jpg";
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <form id="from1">
+        <select id="binatang" onchange="klik()" >
+        <option value="zebra">Zebra</option>
+        <option value="tupai">Tupai</option>
+        <option value="kanguru">Kanguru</option>
+        <option value="macan">Macan</option>
+        <option value="badak">Badak</option>
+        <option value="anjing">Anjing</option>
+        <option value="tupai">Tupai</option>
+        <option value="beruang">Beruang</option>
+        <option value="rubah">Rubah</option>
+        <option value="kucing">Kucing</option>
+        </select>
+    </form>
+    <img src="binatang/zebra.jpg" alt="zebra" id="hutan">
+</body>
+</html>

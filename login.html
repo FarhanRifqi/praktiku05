@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TUGAS LOG IN</title>
+</head>
+<body style="margin: 200px">
+
+	<center>
+		<form method="REQUEST">
+			Username :<br>
+			<input type="text" placeholder="username" id="name" name="username"><br>
+			Password<br>
+			<input type="password"  placeholder="password" id="sandi" name="password"><br>
+			<button type="submit" onclick="return log()">SUBMIT</button>
+		</form>
+	</center>
+
+</body>
+<script type="text/javascript">
+	function log(){
+		username = document.getElementById("name").value;
+		password = document.getElementById("sandi").value;
+
+		if (username == "" || password == ""){
+			alert("username / password tidak boleh kosong");
+			return false;
+		}
+		else if(password.length < 6){
+			alert("password yang anda masukkan kurang dari 6 ");
+			return false;
+		}
+		else if(username == "farhanfauzi" && password == "12345678"){
+			window.location = "login.html";
+			return false;
+		}
+		else{
+			alert("username / password salah");
+		}
+	}
+	
+</script>
+</html>
